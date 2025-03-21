@@ -2,8 +2,8 @@
   "basics": {
     "name": "Humberto Yupanqui Apaza",
     "label": "Full Stack Developer con más de +1 años de experiencia & estudiante de Ingeniería de Software.",
-    "image": "/me.webp",
-    "email": "yupanquidev@gmail.com",
+    "image": "public/me.webp",
+    "email": "yupanquiah@gmail.com",
     "phone": "51983844911",
     "url": "https://yupanqui.dev",
     "summary": "+1 años de experiencia en el desarrollo de aplicaciones web y móviles. He trabajado en proyectos de diferentes tamaños y tecnologías. Me gusta aprender y compartir conocimientos.",
@@ -17,18 +17,18 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "yupanquidev",
-        "url": "https://linkedin.com/in/yupanquidev"
+        "username": "yupanquiah",
+        "url": "https://linkedin.com/in/yupanquiah"
       },
       {
         "network": "X",
-        "username": "yupanquidev",
-        "url": "https://x.com/yupanquidev"
+        "username": "yupanquiah",
+        "url": "https://x.com/yupanquiah"
       },
       {
         "network": "GitHub",
-        "username": "yupanquidev",
-        "url": "https://github.com/yupanquidev"
+        "username": "yupanquiah",
+        "url": "https://github.com/yupanquiah"
       }
     ]
   },
@@ -40,7 +40,9 @@
       "startDate": "2024-04-15",
       "endDate": "2024-07-25",
       "summary": "Implementación de nuevas funcionalidades en la aplicación web de la empresa.",
-      "highlights": ["Started the company"]
+      "highlights": [
+        "Started the company"
+      ]
     },
     {
       "name": "ITETNIA",
@@ -49,7 +51,9 @@
       "startDate": "2023-08-01",
       "endDate": "2024-04-12",
       "summary": "",
-      "highlights": ["Started the company"]
+      "highlights": [
+        "Started the company"
+      ]
     }
   ],
   "education": [
@@ -104,7 +108,10 @@
   "interests": [
     {
       "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
     }
   ],
   "references": [
@@ -118,7 +125,10 @@
       "name": "OdontoApp",
       "isActive": true,
       "description": "Aplicación para la gestión de clínicas dentales",
-      "highlights": ["Gestión de pacientes", "Gestión de citas"],
+      "highlights": [
+        "Gestión de pacientes",
+        "Gestión de citas"
+      ],
       "url": "#",
       "repository": "#"
     }
