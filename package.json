@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/geist": "5.2.5",
+    "@fontsource/monaspace-argon": "5.2.5",
+    "@fontsource/monaspace-neon": "5.2.5",
     "astro": "5.5.3",
     "hotkeypad": "1.0.1"
   }

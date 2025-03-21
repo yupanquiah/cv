@@ -1,327 +1,174 @@
 ---
-import SelectAction from '@/components/SelectAction.astro'
+import "hotkeypad/reset.css";
+import "hotkeypad/index.css";
 
-import ArrowDown from '@/icons/ArrowDown.astro'
-import ArrowUp from '@/icons/ArrowUp.astro'
-import CornerDownLeft from '@/icons/CornerDownLeft.astro'
-import GitHub from '@/icons/GitHub.astro'
-import LinkedIn from '@/icons/LinkedIn.astro'
-import Printer from '@/icons/Printer.astro'
-import World from '@/icons/World.astro'
-import X from '@/icons/X.astro'
+import { basics } from "@/cv";
+import { SOCIAL_ICONS } from "@/data/constants";
 
-import type { SocialIcon } from '@/types'
+const { profiles } = basics;
 
-import { basics } from '@/cv'
-const { profiles, url } = basics
+const profilesInfo = profiles.map(({ network, url, id }) => {
+  const icon = SOCIAL_ICONS[id];
+  const firstLetter = id[0].toUpperCase();
 
-const SOCIAL_ICONS: SocialIcon = {
-	LinkedIn,
-	GitHub,
-	X,
-	World
-}
+  return {
+    id: id,
+    section: "Social",
+    title: `Visitar ${network}`,
+    url,
+    icon,
+    hotkey: `ctrl+${firstLetter}`,
+  };
+});
 ---
 
-<dialog class="modal no-print">
-  <article>
-    <label for="search">
-      <input
-        id="search"
-        class="search"
-        type="text"
-        placeholder="Buscar comando"
-      />
-    </label>
-    <main>
-      <section>
-        <span>acciones</span>
-        <SelectAction
-          className="select-item"
-          action="Imprimir"
-          hotkey="p"
-          selected
-          letterClass="print-letter"
-        >
-          <Printer slot="icon" width="18" height="18" />
-        </SelectAction>
-      </section>
-      <section>
-        <span>Enlaces</span>
-        {
-          profiles.map(({ network, url }) => {
-            const Icon = SOCIAL_ICONS[network];
-            const firstLetter = network[0].toUpperCase();
-            return (
-              <SelectAction
-                className="select-item"
-                action={network}
-                hotkey={firstLetter}
-                url={url}
-                letterClass="hotkey-letter"
-              >
-                <Icon slot="icon" width="18" height="18" />
-              </SelectAction>
-            );
-          })
-        }
-        {
-          url && (
-            <SelectAction
-              className="select-item"
-              action="Mi sitio web"
-              hotkey="y"
-              url={url}
-              letterClass="hotkey-letter"
-            >
-              <World slot="icon" width="18" height="18" />
-            </SelectAction>
-          )
-        }
-      </section>
-    </main>
-    <footer>
-      <span>
-        <CornerDownLeft className="key-icon" width="18" height="18" />
-        seleccionar
-      </span>
-      <span>
-        <ArrowDown className="key-icon" width="18" height="18" />
-        <ArrowUp className="key-icon" width="18" height="18" />
-        navegar
-      </span>
-      <span><span class="esc">esc</span>cerrar</span>
-    </footer>
-  </article>
-</dialog>
+<footer id="normal-footer" class="no-print">
+  Pulsa <kbd>Cmd</kbd> + <kbd>K</kbd> para abrir la paleta de comandos.
+</footer>
 
-<style>
-  dialog {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    background-color: transparent;
-    border: none;
+<div id="footer-button" class="no-print">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon icon-tabler icon-tabler-command"
+    width="32"
+    height="32"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="#777"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path
+      d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10"
+    ></path>
+  </svg>
+</div>
 
-    article {
-      position: relative;
-      max-width: 595px;
-      margin: auto;
-      top: 20%;
-      background-color: #fff;
-      border-radius: 8px;
-      filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
-
-      label {
-        input {
-          width: 100%;
-          border-top-left-radius: 8px;
-          border-top-right-radius: 8px;
-          border-top: none;
-          border-inline: none;
-          border-bottom: 1px solid #e4e5e9;
-          padding: 16px;
-          font-family: "Monaspace Argon";
-          font-size: 16px;
-          font-weight: 700;
-          outline: none;
-          color: #a7aab9;
-        }
-
-        input::placeholder {
-          color: #a7aab9;
-        }
-      }
-
-      main {
-        padding: 16px 0;
-
-        section {
-          span {
-            color: #a7aab9;
-            font-size: 12px;
-            font-family: "Monaspace Argon";
-            padding-left: 16px;
-          }
-        }
-      }
-
-      footer {
-        border-top: 1px solid rgb(239, 241, 244);
-        padding: 8px 16px;
-        font-size: 12px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 12px;
-        align-items: center;
-
-        span {
-          display: flex;
-          align-items: center;
-          gap: 4px;
-          color: #6b6f76;
-          font-weight: 400;
-        }
-      }
-    }
-  }
-
-  dialog::backdrop {
-    background: rgba(167, 170, 185, 0.5);
-  }
-
-  .esc {
-    background-color: rgb(239, 241, 244);
-    padding: 3px 4px;
-    border-radius: 4px;
-    font-weight: 500;
-  }
-
-  @media (min-width: 390px) {
-    footer {
-      flex-wrap: nowrap;
-    }
-  }
-</style>
-
-<style is:global>
-  [aria-selected="true"] {
-    border-left: 2px solid rgb(110, 94, 210) !important;
-    background-color: rgb(248, 249, 251);
-    transition: background-color 0.15s ease-in;
-  }
-
-  .key-icon {
-    background-color: rgb(239, 241, 244);
-    border-radius: 4px;
-    color: #6b6f76;
-    stroke-width: 2;
-    padding: 2px;
-  }
-
-  .filter {
-    visibility: hidden;
-    position: fixed;
-    opacity: 0;
-    height: 0;
-  }
-</style>
+<div
+  id="hotkeypad"
+  data-placeholder="Buscar comando"
+  data-info={JSON.stringify(profilesInfo)}
+>
+</div>
 
 <script>
-  const d = document;
-  const dialog = d.querySelector(".modal") as HTMLDialogElement;
-  const links = d.querySelectorAll(".select-item");
-  const hotkeyLetters = d.querySelectorAll(".hotkey-letter");
-  const printLetter = d.querySelector(".print-letter") as HTMLElement;
-  const noPrint = d.querySelector(".no-print");
+  import type { Info } from "@/types";
+  import HotKeyPad from "hotkeypad";
 
-  dialog.addEventListener("click", (e) => {
-    const target = e.target;
-    if (target === dialog) dialog.close();
+  const hotkeypad = new HotKeyPad();
+  const info = hotkeypad.instance.getAttribute("data-info") ?? "[]";
+  const parsedInfo = JSON.parse(info) as Info[];
+
+  const data = parsedInfo.map(({ url, hotkey, icon, id, section, title }) => {
+    return {
+      id,
+      title,
+      icon,
+      hotkey,
+      section,
+      handler: () => {
+        window.open(url, "_blank");
+      },
+    };
   });
+  hotkeypad.setCommands([
+    {
+      id: "print",
+      title: "Imprimir",
+      icon: `<svg style="margin-right: 8px" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
+</svg>`,
+      hotkey: "ctrl+P",
+      section: "Acciones",
+      handler: () => {
+        window.print();
+      },
+    },
+    ...data,
+  ]);
 
-  d.addEventListener("keydown", (e) => {
-    const key = e.key.toLowerCase();
-    const ctrlKey = e.ctrlKey;
-
-    if (ctrlKey && key === "k") {
-      e.preventDefault();
-      dialog.showModal();
-    }
-
-    if (e.key === "Escape") dialog.close();
-  });
-
-  // Search
-  d.addEventListener("keyup", (e) => {
-    const target = e.target as HTMLInputElement;
-    if (target.matches(".search")) {
-      d.querySelectorAll(".select-item").forEach((item) => {
-        const itemText = item.innerHTML.toLowerCase();
-        const targetValue = target.value.toLowerCase();
-
-        itemText.includes(targetValue)
-          ? item.classList.remove("filter")
-          : item.classList.add("filter");
-      });
-    }
-  });
-
-  // Navigation
-  let selectIndex = 0;
-  function selectItem(index: number) {
-    links.forEach((link) => {
-      link.setAttribute("aria-selected", "false");
+  const footerButton = document.getElementById("footer-button");
+  footerButton?.addEventListener("click", () => {
+    var event = new KeyboardEvent("keydown", {
+      key: "K",
+      code: "KeyK",
+      keyCode: 75,
+      which: 75,
+      ctrlKey: true,
+      altKey: false,
+      shiftKey: false,
+      metaKey: false,
     });
 
-    selectIndex = index;
-    links[index].setAttribute("aria-selected", "true");
-  }
-
-  d.addEventListener("keydown", (e) => {
-    const subtract = links.length - 1;
-    const key = e.key;
-    const enterKey = e.key === "Enter";
-
-    if (key === "ArrowDown") {
-      e.preventDefault();
-      const operator = selectIndex === subtract ? 0 : ++selectIndex;
-      selectItem((selectIndex = operator));
-    }
-
-    if (key === "ArrowUp") {
-      e.preventDefault();
-      const operator = selectIndex === 0 ? subtract : --selectIndex;
-      selectItem((selectIndex = operator));
-    }
-
-    if (selectIndex !== 0 && enterKey) {
-      const href = links[selectIndex].getAttribute("href");
-      window.open(href as string);
-    }
-
-    if (selectIndex === 0 && enterKey) {
-      if (noPrint) window.print();
-    }
-  });
-
-  links[0].addEventListener("click", () => {
-    if (noPrint) window.print();
-  });
-
-  links.forEach((link, index) => {
-    link.addEventListener("mouseover", () => {
-      selectItem(index);
-    });
-  });
-
-  // Open with keyboard shortcut
-  let letters: any = {};
-  hotkeyLetters.forEach((item) => {
-    const letter = item.innerHTML.trim().toLowerCase();
-    const link = item.closest("a");
-    letters[letter] = link;
-  });
-
-  d.addEventListener("keydown", (e) => {
-    const key = e.key.toLowerCase();
-    const ctrlKey = e.ctrlKey;
-
-    if (ctrlKey && letters[key]) {
-      e.preventDefault();
-      const href = letters[key].getAttribute("href");
-      window.open(href);
-    }
-  });
-
-  const letter = printLetter.innerHTML.trim().toLowerCase();
-  d.addEventListener("keydown", (e) => {
-    const key = e.key.toLowerCase();
-    const ctrlKey = e.ctrlKey;
-    if (ctrlKey && key === letter) {
-      e.preventDefault();
-      window.print();
-    }
+    document.dispatchEvent(event);
   });
 </script>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 601px) {
+    #normal-footer {
+      display: block;
+    }
+
+    #footer-button {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #normal-footer {
+      display: none;
+    }
+
+    #footer-button {
+      background: #fff;
+      position: fixed;
+      border: 1px solid #eee;
+      right: 10px;
+      bottom: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  footer {
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding-block: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+
+    view-timeline-name: --revealing;
+    view-timeline-axis: block;
+
+    animation: linear 0.3s fadeIn;
+    animation-timeline: --revealing;
+    animation-range: entry 100% cover 10%;
+  }
+
+  kbd {
+    background: #eee;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+</style>

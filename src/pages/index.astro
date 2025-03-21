@@ -1,17 +1,23 @@
 ---
-import Layout from '@/layouts/Layout.astro'
+import Layout from "@/layouts/Layout.astro";
 
-import Footer from '@/components/Footer.astro'
-import KeyboardManager from '@/components/KeyboardManager.astro'
-import About from '@/components/sections/About.astro'
-import Education from '@/components/sections/Education.astro'
-import Experience from '@/components/sections/Experience.astro'
-import Hero from '@/components/sections/Hero.astro'
-import Projects from '@/components/sections/Projects.astro'
-import Skills from '@/components/sections/Skills.astro'
+import Footer from "@/components/Footer.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
 
-import { basics } from '@/cv'
-const { name } = basics
+import "@fontsource-variable/geist";
+import "@fontsource/monaspace-argon/300.css";
+import "@fontsource/monaspace-argon/400.css";
+import "@fontsource/monaspace-neon/400.css";
+import "@fontsource/monaspace-neon/500.css";
+
+import { basics } from "@/cv";
+const { name } = basics;
 ---
 
 <Layout title=`${name}`>

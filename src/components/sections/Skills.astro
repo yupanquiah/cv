@@ -1,33 +1,33 @@
 ---
-import Section from '@/components/Section.astro'
+import Section from "@/components/Section.astro";
 
-import CSS from '@/icons/CSS.astro'
-import Git from '@/icons/Git.astro'
-import Go from '@/icons/Go.astro'
-import HTML from '@/icons/HTML.astro'
-import JavaScript from '@/icons/JavaScript.astro'
-import Laravel from '@/icons/Laravel.astro'
-import Nodejs from '@/icons/Nodejs.astro'
-import PHP from '@/icons/PHP.astro'
-import SQL from '@/icons/SQL.astro'
-import TailwindCSS from '@/icons/TailwindCSS.astro'
-import TypeScript from '@/icons/TypeScript.astro'
+import CSS from "@/icons/CSS.astro";
+import Git from "@/icons/Git.astro";
+import Go from "@/icons/Go.astro";
+import HTML from "@/icons/HTML.astro";
+import JavaScript from "@/icons/JavaScript.astro";
+import Laravel from "@/icons/Laravel.astro";
+import Nodejs from "@/icons/Nodejs.astro";
+import PHP from "@/icons/PHP.astro";
+import SQL from "@/icons/SQL.astro";
+import TailwindCSS from "@/icons/TailwindCSS.astro";
+import TypeScript from "@/icons/TypeScript.astro";
 
-import { skills } from '@/cv'
+import { skills } from "@/cv";
 
 const SKILLS_ICONS: Record<string, any> = {
-	Go,
-	JavaScript,
-	TypeScript,
-	CSS,
-	Laravel,
-	Nodejs,
-	TailwindCSS,
-	PHP,
-	SQL,
-	Git,
-	HTML
-}
+  Go,
+  JavaScript,
+  TypeScript,
+  CSS,
+  Laravel,
+  Nodejs,
+  TailwindCSS,
+  PHP,
+  SQL,
+  Git,
+  HTML,
+};
 ---
 
 <Section title="Habilidades">
@@ -59,7 +59,7 @@ const SKILLS_ICONS: Record<string, any> = {
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      font-family: "Monaspace Argon";
+      font-family: "Monaspace Argon", monospace;
       border-radius: 6px;
       background-color: #e4e5e9;
       color: #09090b;

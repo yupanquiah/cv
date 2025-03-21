@@ -1,14 +1,14 @@
 ---
 interface Props {
-	action: string
-	className: string
-	hotkey: string
-	url?: string
-	selected?: boolean
-	letterClass: string
+  action: string;
+  className: string;
+  hotkey: string;
+  url?: string;
+  selected?: boolean;
+  letterClass: string;
 }
 
-const { action, className, hotkey, url, selected, letterClass } = Astro.props
+const { action, className, hotkey, url, selected, letterClass } = Astro.props;
 ---
 
 <a class={className} href={url} aria-selected={selected} target="_blank">
@@ -42,7 +42,7 @@ const { action, className, hotkey, url, selected, letterClass } = Astro.props
 
       p {
         color: #60637a;
-        font-family: "Monaspace Neon";
+        font-family: "Monaspace Neon", monospace;
         font-size: 14px;
         font-weight: 500;
         padding-left: 4px;
@@ -57,7 +57,7 @@ const { action, className, hotkey, url, selected, letterClass } = Astro.props
       kbd {
         padding: 1px 4px;
         color: #7b7f95;
-        font-family: "Monaspace Argon";
+        font-family: "Monaspace Argon", monospace;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;

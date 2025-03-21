@@ -16,16 +16,19 @@
     },
     "profiles": [
       {
+        "id": "linkedin",
         "network": "LinkedIn",
         "username": "yupanquiah",
         "url": "https://linkedin.com/in/yupanquiah"
       },
       {
+        "id": "x",
         "network": "X",
         "username": "yupanquiah",
         "url": "https://x.com/yupanquiah"
       },
       {
+        "id": "github",
         "network": "GitHub",
         "username": "yupanquiah",
         "url": "https://github.com/yupanquiah"

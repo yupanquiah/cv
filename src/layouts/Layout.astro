@@ -1,109 +1,79 @@
 ---
-import Head from '@/components/Head.astro'
+import Head from "@/components/Head.astro";
 
 interface Props {
-	title: string
+  title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-	<Head>
-		<title>{title}</title>
-	</Head>
-	<body>
-		<slot />
-	</body>
+  <Head>
+    <title>{title}</title>
+  </Head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	@font-face {
-		font-family: "Geist";
-		src:
-			url("/fonts/geist/VF.ttf") format("truetype"),
-			url("/fonts/geist/VF.woff2") format("woff2 variations"),
-			url("/fonts/geist/VF.woff") format("woff");
-		font-weight: 100 900;
-		font-stretch: 50% 200%;
-		font-display: swap;
-		font-style: normal;
-	}
+  html {
+    font-family: "Monaspace Neon", monospace;
+  }
 
-	@font-face {
-		font-family: "Monaspace Neon";
-		src: url("/fonts/monaspace/NeonVarVF.ttf") format("truetype");
-		font-weight: 100 900;
-		font-stretch: 50% 200%;
-		font-display: swap;
-		font-style: normal;
-	}
+  * {
+    min-width: 0;
+    font: inherit;
+  }
 
-	@font-face {
-		font-family: "Monaspace Argon";
-		src: url("/fonts/monaspace/ArgonVarVF.ttf") format("truetype");
-		font-weight: 100 900;
-		font-stretch: 50% 200%;
-		font-display: swap;
-		font-style: normal;
-	}
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-	html {
-		font-family: "Monaspace Neon", monospace;
-	}
+  img,
+  figure,
+  video,
+  svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
 
-	* {
-		min-width: 0;
-		font: inherit;
-	}
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    min-height: 100vh;
+  }
 
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-family: "Geist Variable", sans-serif;
+    text-wrap: balance;
+  }
 
-	img,
-	figure,
-	video,
-	svg {
-		display: block;
-		height: auto;
-		max-width: 100%;
-	}
+  p {
+    text-wrap: pretty;
+    line-height: normal;
+    margin: 0;
+  }
 
-	body {
-		margin: 0;
-		min-height: 100dvh;
-		min-height: 100vh;
-	}
+  a {
+    text-decoration: none;
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		margin: 0;
-		font-family: "Geist", sans-serif;
-		text-wrap: balance;
-	}
-
-	p {
-		text-wrap: pretty;
-		line-height: normal;
-		margin: 0;
-	}
-
-	a {
-		text-decoration: none;
-	}
-
-	li,
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
+  li,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 </style>

@@ -1,28 +1,28 @@
 ---
-import Section from '@/components/Section.astro'
+import Section from "@/components/Section.astro";
 
-import GitHub from '@/icons/GitHub.astro'
-import LinkedIn from '@/icons/LinkedIn.astro'
-import Mail from '@/icons/Mail.astro'
-import Whatsapp from '@/icons/Whatsapp.astro'
-import World from '@/icons/World.astro'
-import X from '@/icons/X.astro'
+import GitHub from "@/icons/GitHub.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import Mail from "@/icons/Mail.astro";
+import Whatsapp from "@/icons/Whatsapp.astro";
+import World from "@/icons/World.astro";
+import X from "@/icons/X.astro";
 
-import { basics } from '@/cv'
+import { basics } from "@/cv";
 
-const { name, label, image, location, profiles, phone, email } = basics
-const { city, region } = location
+const { name, label, image, location, profiles, phone, email } = basics;
+const { city, region } = location;
 
 const SOCIAL_ICONS: Record<string, any> = {
-	GitHub,
-	LinkedIn,
-	X
-}
+  GitHub,
+  LinkedIn,
+  X,
+};
 
-const linkedinInfo = profiles.find(({ network }) => network === 'LinkedIn')
-const likedinUrl = linkedinInfo?.url
+const linkedinInfo = profiles.find(({ network }) => network === "LinkedIn");
+const likedinUrl = linkedinInfo?.url;
 
-const printInfo = [email, phone, likedinUrl].filter(Boolean).join(' • ')
+const printInfo = [email, phone, likedinUrl].filter(Boolean).join(" • ");
 ---
 
 <Section>
@@ -134,7 +134,7 @@ const printInfo = [email, phone, likedinUrl].filter(Boolean).join(' • ')
   }
 
   span {
-    font-family: "Monaspace Argon";
+    font-family: "Monaspace Argon", monospace;
     color: #60637a;
     display: flex;
     align-items: center;
