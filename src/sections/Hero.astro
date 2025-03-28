@@ -1,0 +1,152 @@
+---
+import GitHub from "@/assets/icons/github.svg";
+import Globe from "@/assets/icons/globe.svg";
+import LinkedIn from "@/assets/icons/linkedin.svg";
+import Mail from "@/assets/icons/mail.svg";
+import Phone from "@/assets/icons/mobile.svg";
+import X from "@/assets/icons/xlogo.svg";
+
+import { basics } from "@/data/cv.json";
+import type { Icon } from "@/types/icon";
+
+const SOCIAL_ICONS: Icon = {
+  GitHub,
+  LinkedIn,
+  X,
+};
+
+const {
+  name,
+  image,
+  label,
+  location,
+  email,
+  phone,
+  url: website,
+  profiles: PROFILES,
+} = basics;
+const { url, address, country, peruTime, flag } = location;
+const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
+---
+
+<section>
+  <article>
+    <h1>{name}</h1>
+    <p>{label}</p>
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      <Globe size={12} />
+      {currentLocation}
+    </a>
+    <section>
+      {
+        url && (
+          <a href={website} title={`Visitar la página ${name} `}>
+            <Globe />
+          </a>
+        )
+      }
+      {
+        email && (
+          <a
+            href={url}
+            title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+          >
+            <Mail />
+          </a>
+        )
+      }
+      {
+        phone && (
+          <a
+            href={url}
+            title={`Llamar por teléfono a ${name} al número ${phone}`}
+          >
+            <Phone />
+          </a>
+        )
+      }
+      {
+        PROFILES.map(({ network, username, url }) => {
+          const Icon = SOCIAL_ICONS[network];
+          return (
+            <a href={url} title={`Visitar el perfil de ${name} en ${network}`}>
+              <Icon />
+            </a>
+          );
+        })
+      }
+    </section>
+  </article>
+  <figure>
+    <img src={image} alt="" />
+  </figure>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 8px;
+      }
+
+      p {
+        font-family: "Monaspace Neon", monospace;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        cursor: pointer;
+        color: #000;
+        font-family: "Monaspace Radon", cursive;
+        font-size: 12px;
+      }
+
+      a:hover {
+        opacity: 9d0%;
+        text-decoration: underline;
+      }
+
+      section {
+        display: flex;
+        justify-content: start;
+        padding: 8px 0;
+        gap: 4px;
+
+        a {
+          padding: 8px;
+          border: 0.5px solid rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  img,
+  figure {
+    width: 100px;
+    height: 100px;
+  }
+
+  img {
+    border-radius: 12px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+</style>
