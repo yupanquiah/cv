@@ -1,0 +1,142 @@
+{
+  "basics": {
+    "name": "Humberto Yupanqui Apaza",
+    "label": "Desarrollador Web & estudiante de Ingeniería de Software",
+    "image": "/src/assets/imgs/profile.jpg",
+    "email": "yupanquiah@gmail.com",
+    "phone": "5219838449911",
+    "url": "https://yupanqui.dev",
+    "summary": "+1 años de experiencia en el desarrollo de aplicaciones web y móviles. He trabajado en proyectos de diferentes tamaños y tecnologías. Me gusta aprender y compartir conocimientos.",
+    "location": {
+      "url": "https://www.google.com/maps/place/Cusco/",
+      "address": "Cusco",
+      "postalCode": "08820",
+      "city": "Cusco",
+      "countryCode": "PE",
+      "country": "Perú",
+      "peruTime": "PET",
+      "flag": "🇵🇪"
+    },
+    "profiles": [
+      {
+        "id": "linkedin",
+        "network": "LinkedIn",
+        "username": "yupanquiah",
+        "url": "https://linkedin.com/in/yupanquiah"
+      },
+      {
+        "id": "x",
+        "network": "X",
+        "username": "yupanquiah",
+        "url": "https://x.com/yupanquiah"
+      },
+      {
+        "id": "github",
+        "network": "GitHub",
+        "username": "yupanquiah",
+        "url": "https://github.com/yupanquiah"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "SOFTCONT P&R",
+      "position": "Full Stack Developer",
+      "url": "https://softcont.pe/",
+      "startDate": "2024-04-15",
+      "endDate": "2024-07-25",
+      "summary": "Implementación de nuevas funcionalidades en la aplicación web de la empresa.",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "ITETNIA",
+      "position": "Full Stack Developer",
+      "url": "https://www.itetnia.com/",
+      "startDate": "2023-08-01",
+      "endDate": "2024-04-12",
+      "summary": "",
+      "highlights": [
+        "Started the company"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "SENATI",
+      "url": "https://www.senati.edu.pe",
+      "area": "Ingenieria de Software con IA",
+      "studyType": "Bachelor",
+      "startDate": "2021-03-20",
+      "endDate": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "TailwindCSS"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Nodejs"
+    },
+    {
+      "name": "Go"
+    },
+    {
+      "name": "SQL"
+    },
+    {
+      "name": "Git"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "OdontoApp",
+      "isActive": true,
+      "description": "Aplicación para la gestión de clínicas dentales",
+      "highlights": [
+        "Gestión de pacientes",
+        "Gestión de citas"
+      ],
+      "url": "#",
+      "repository": "#"
+    }
+  ]
+}
