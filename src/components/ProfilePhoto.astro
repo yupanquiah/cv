@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+import photo from "@/assets/imgs/profile.jpg";
+
+import { basics } from "@/data/cv.json";
+const { name } = basics;
+---
+
+<figure>
+  <Image src={photo} alt={`Foto de perfil de ${name}`} />
+</figure>
+
+<style>
+  img,
+  figure {
+    width: 100px;
+    height: 100px;
+  }
+
+  img {
+    border-radius: 12px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+</style>
