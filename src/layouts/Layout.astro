@@ -1,0 +1,89 @@
+---
+import "@fontsource-variable/geist";
+import "@fontsource/monaspace-neon/300.css";
+import "@fontsource/monaspace-neon/400.css";
+import "@fontsource/monaspace-neon/500.css";
+import "@fontsource/monaspace-radon/300.css";
+import "@fontsource/monaspace-radon/400.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <main class="app">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  .app {
+    max-width: 672px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 24px 0;
+  }
+</style>
+
+<style is:global>
+  * {
+    min-width: 0;
+    font: inherit;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img,
+  figure,
+  svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+    min-height: 100dvh;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Geist Variable", sans-serif;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
