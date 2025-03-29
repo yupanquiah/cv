@@ -40,14 +40,22 @@
   },
   "work": [
     {
-      "name": "SOFTCONT P&R",
+      "name": "SOFTCONT",
       "position": "Full Stack Developer",
       "url": "https://softcont.pe/",
       "startDate": "2024-04-15",
       "endDate": "2024-07-25",
       "summary": "Implementación de nuevas funcionalidades en la aplicación web de la empresa.",
+      "items": [
+        "Built design system with Tailwind CSS, improving development speed and time to market",
+        "Implement design system with Tailwind CSS, improving development speed and time to market"
+      ],
       "highlights": [
-        "Started the company"
+        "Precencial",
+        "PHP",
+        "Laravel",
+        "PostgreSQL",
+        "TailwindCSS"
       ]
     },
     {
@@ -58,7 +66,28 @@
       "endDate": "2024-04-12",
       "summary": "",
       "highlights": [
-        "Started the company"
+        "Precencial",
+        "PHP",
+        "JavaScript",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Skynet E.I.R.L",
+      "position": "Aprendiz de diseño web",
+      "url": "",
+      "startDate": "2023-08-01",
+      "endDate": "2024-04-12",
+      "summary": "",
+      "items": [
+        "Mantenimiento y Optimización de Paginas web.",
+        "Manejo de Seo, hosting y dominio.",
+        "Desarrollador Wordpress."
+      ],
+      "highlights": [
+        "WordPress",
+        "SEO",
+        "Diseño"
       ]
     }
   ],
@@ -66,39 +95,67 @@
     {
       "institution": "SENATI",
       "url": "https://www.senati.edu.pe",
-      "area": "Ingenieria de Software con IA",
-      "studyType": "Bachelor",
+      "area": "Ingenieria de Software con Inteligencia Artificial",
+      "studyType": "Técnico",
       "startDate": "2021-03-20",
-      "endDate": ""
+      "endDate": "2024-11-30"
     }
   ],
   "skills": [
     {
-      "name": "HTML"
+      "id": "html",
+      "name": "HTML",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
     },
     {
-      "name": "CSS"
+      "id": "css",
+      "name": "CSS",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
     },
     {
-      "name": "JavaScript"
+      "id": "javascript",
+      "name": "JavaScript",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
-      "name": "TailwindCSS"
+      "id": "tailwindcss",
+      "name": "TailwindCSS",
+      "url": "https://tailwindcss.com/"
     },
     {
-      "name": "TypeScript"
+      "id": "typescript",
+      "name": "TypeScript",
+      "url": "https://www.typescriptlang.org/"
     },
     {
-      "name": "Nodejs"
+      "id": "nodejs",
+      "name": "Nodejs",
+      "url": "https://nodejs.org/"
     },
     {
-      "name": "Go"
+      "id": "laravel",
+      "name": "Laravel",
+      "url": "https://laravel.com/"
     },
     {
-      "name": "SQL"
+      "id": "php",
+      "name": "PHP",
+      "url": "https://www.php.net/"
     },
     {
-      "name": "Git"
+      "id": "astro",
+      "name": "Astro",
+      "url": "https://astro.build/"
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "url": "https://www.w3schools.com/sql/"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "url": "https://git-scm.com/doc"
     }
   ],
   "languages": [
