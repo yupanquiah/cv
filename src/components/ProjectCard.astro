@@ -1,0 +1,89 @@
+---
+import GitHub from "@/assets/icons/github.svg";
+
+interface Props {
+  name: string;
+  url?: string;
+  description: string;
+  isActive: boolean;
+  repository: string;
+}
+
+const { name, url, description, isActive, repository } = Astro.props;
+---
+
+<article>
+  <header>
+    <a href={url}><h4>{name}</h4></a>
+    {isActive && <span>•</span>}
+    {
+      repository && (
+        <a href={repository}>
+          <GitHub size="14" />
+        </a>
+      )
+    }
+  </header>
+  <main>
+    <p>{description}</p>
+  </main>
+  <slot name="highlights" />
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+
+    header {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+
+      a {
+        color: #000;
+
+        h4 {
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      span {
+        color: rgb(0, 188, 47);
+        animation-name: flicker;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    main p {
+      font-size: 12px;
+      font-weight: 300;
+      font-family: "Monaspace Neon", monospace;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
