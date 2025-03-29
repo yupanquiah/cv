@@ -1,0 +1,48 @@
+---
+import Section from "@/components/Section.astro";
+
+import css from "@/assets/icons/css.svg";
+import git from "@/assets/icons/git.svg";
+
+import { skills as SKILLS } from "@/data/cv.json";
+import type { Icon } from "@/types/icon";
+
+const ICONS: Icon = {
+  git,
+  css,
+};
+---
+
+<Section title="Habilidades">
+  <section slot="content">
+    {
+      SKILLS.map(({ id, name, url }) => {
+        const Icon = ICONS[id];
+        return (
+          <a href={url}>
+            {Icon && <Icon size="14" />}
+            <span>{name}</span>
+          </a>
+        );
+      })
+    }
+  </section>
+</Section>
+
+<style>
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    a {
+      display: flex;
+      gap: 4px;
+      font-size: 12px;
+      font-family: "Monaspace Neon", monospace;
+      padding: 3px 8px;
+      background: rgba(0, 0, 0, 0.15);
+      color: #000;
+    }
+  }
+</style>

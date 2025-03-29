@@ -1,0 +1,22 @@
+---
+import Section from "@/components/Section.astro";
+
+import { basics } from "@/data/cv.json";
+
+const { summary } = basics;
+---
+
+<Section title="Sobre Mí">
+  <p slot="content">
+    {summary}
+  </p>
+</Section>
+
+<style>
+  p {
+    font-size: 14px;
+    font-family: "Monaspace Neon", monospace;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+  }
+</style>

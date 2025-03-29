@@ -1,0 +1,86 @@
+---
+import ExperienceCard from "@/components/ExperienceCard.astro";
+import Section from "@/components/Section.astro";
+
+import { work as WORKS } from "@/data/cv.json";
+---
+
+<Section title="Experiencia">
+  <div slot="content">
+    {
+      WORKS.map(
+        ({
+          name,
+          startDate,
+          endDate,
+          position,
+          summary,
+          url,
+          items,
+          highlights,
+        }) => {
+          return (
+            <ExperienceCard
+              company={name}
+              startDate={startDate}
+              endDate={endDate}
+              position={position}
+              summary={summary}
+              url={url}
+            >
+              {items && items.length > 0 && (
+                <ul slot="items">
+                  {items.map((items) => (
+                    <li>{items}</li>
+                  ))}
+                </ul>
+              )}
+              {highlights && highlights.length > 0 && (
+                <footer slot="highlights">
+                  {highlights.map((highlights) => (
+                    <span>{highlights}</span>
+                  ))}
+                </footer>
+              )}
+            </ExperienceCard>
+          );
+        },
+      )
+    }
+  </div>
+</Section>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  ul {
+    li {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 12px;
+      font-weight: 300;
+      font-family: "Monaspace Neon", monospace;
+      list-style: disc;
+      list-style-position: inside;
+    }
+  }
+
+  span {
+    display: inline-flex;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 3px 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: "Monaspace Neon", monospace;
+  }
+
+  span:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+</style>

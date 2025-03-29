@@ -1,0 +1,82 @@
+---
+interface Props {
+  company: string;
+  startDate: string;
+  endDate: string;
+  summary: string;
+  position: string;
+  url: string;
+}
+
+const { company, startDate, endDate, summary, position, url } = Astro.props;
+---
+
+<article>
+  <header>
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      <h3>{company}</h3>
+    </a>
+    <span>{startDate}-{endDate}</span>
+  </header>
+  <main>
+    <span>{position}</span>
+    <p>{summary}</p>
+    <slot name="items" />
+  </main>
+  <slot name="highlights" />
+</article>
+
+<style>
+  article {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        color: #000;
+
+        h3 {
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      span {
+        font-family: "Monaspace Radon", cursive;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+      }
+    }
+
+    main {
+      width: 100%;
+
+      span {
+        display: inline-flex;
+        width: 100%;
+        font-family: "Monaspace Neon", monospace;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-family: "Monaspace Neon", monospace;
+        font-size: 12px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    footer {
+      padding-top: 6px;
+      display: inline-flex;
+    }
+  }
+</style>

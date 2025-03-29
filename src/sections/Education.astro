@@ -1,0 +1,60 @@
+---
+import Section from "@/components/Section.astro";
+
+import { education as EDUCATIONS } from "@/data/cv.json";
+---
+
+<Section title="Educacion">
+  {
+    EDUCATIONS.map(({ area, institution, url, startDate, endDate }) => (
+      <article slot="content">
+        <header>
+          <a href={url}>
+            <h3>{institution}</h3>
+          </a>
+          <span>
+            {startDate} - {endDate}
+          </span>
+        </header>
+        <main>{area}</main>
+      </article>
+    ))
+  }
+</Section>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #000;
+
+      h3 {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    span {
+      font-family: "Monaspace Radon", cursive;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+    }
+  }
+
+  main {
+    display: inline-flex;
+    width: 100%;
+    font-family: "Monaspace Neon", monospace;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+  }
+</style>
