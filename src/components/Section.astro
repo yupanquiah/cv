@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section>
+  <h2>{title}</h2>
+  <slot name="content" />
+</section>
+
+<style>
+  section {
+    width: 100%;
+    margin-top: 30px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  }
+</style>
