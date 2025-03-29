@@ -186,14 +186,14 @@
   "projects": [
     {
       "name": "OdontoApp",
-      "isActive": true,
+      "isActive": false,
       "description": "Aplicación para la gestión de clínicas dentales",
       "highlights": [
         "Gestión de pacientes",
         "Gestión de citas"
       ],
-      "url": "#",
-      "repository": "#"
+      "url": "",
+      "repository": ""
     }
   ]
 }
