@@ -19,8 +19,8 @@ const ICONS: Icon = {
       SKILLS.map(({ id, name, url }) => {
         const Icon = ICONS[id];
         return (
-          <a href={url}>
-            {Icon && <Icon size="14" />}
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {Icon && <Icon size="14" class="no-print" />}
             <span>{name}</span>
           </a>
         );
