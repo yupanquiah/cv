@@ -1,4 +1,5 @@
 ---
+import KeyboardManager from "@/components/KeyboardManager.astro";
 import "@fontsource-variable/geist";
 import "@fontsource/monaspace-neon/300.css";
 import "@fontsource/monaspace-neon/400.css";
@@ -18,6 +19,7 @@ import "@fontsource/monaspace-radon/400.css";
     <main class="app">
       <slot />
     </main>
+    <KeyboardManager />
   </body>
 </html>
 
@@ -84,5 +86,11 @@ import "@fontsource/monaspace-radon/400.css";
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  @media print {
+    .no-print {
+      display: none;
+    }
   }
 </style>
