@@ -37,6 +37,11 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
       <Globe size={12} />
       {currentLocation}
     </a>
+    <ul>
+      <li><a href="">{email}</a></li> /
+      <li><a href={website}>{website}</a></li> /
+      <li><a href="">{phone}</a></li>
+    </ul>
     <section>
       {
         url && (
@@ -92,6 +97,24 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
       flex-direction: column;
       gap: 4px;
 
+      ul {
+        display: none;
+        gap: 8px;
+        margin-top: 4px;
+
+        li {
+          a {
+            font-family: "Monaspace Neon", monospace;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: underline;
+            text-decoration-color: #000;
+            text-underline-offset: 3px;
+          }
+        }
+      }
+
       h1 {
         font-size: 24px;
         font-weight: 700;
@@ -137,6 +160,20 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
 
         a:hover {
           background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+  }
+
+  @media print {
+    section {
+      article {
+        ul {
+          display: inline-flex;
+        }
+
+        section {
+          display: none;
         }
       }
     }
