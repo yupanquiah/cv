@@ -173,4 +173,12 @@ const profilesInfo = profiles.map(({ network, url }) => {
     padding: 3px 4px;
     font-size: 12px;
   }
+
+  @media print {
+    .no-print,
+    footer,
+    #normal-footer {
+      display: none;
+    }
+  }
 </style>
