@@ -6,6 +6,9 @@ import "@fontsource/monaspace-neon/300.css";
 import "@fontsource/monaspace-neon/400.css";
 import "@fontsource/monaspace-neon/500.css";
 import "@fontsource/monaspace-radon/400.css";
+
+import { basics } from "@/data/cv.json";
+const { name } = basics;
 ---
 
 <!doctype html>
@@ -14,7 +17,7 @@ import "@fontsource/monaspace-radon/400.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro Basics</title>
+    <title>{name} - CV</title>
   </head>
   <body>
     <main class="app">
