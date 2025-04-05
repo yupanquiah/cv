@@ -88,7 +88,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
 <style>
   section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 24px;
 
@@ -145,6 +145,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
 
       section {
         display: flex;
+        flex-direction: row;
         justify-content: start;
         padding: 8px 0;
         gap: 4px;
@@ -161,6 +162,18 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
         a:hover {
           background-color: rgba(0, 0, 0, 0.05);
         }
+      }
+    }
+  }
+
+  @media (width >= 40rem) {
+    section {
+      justify-content: space-between;
+      flex-direction: row;
+
+      article {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
