@@ -132,8 +132,8 @@
       "url": "https://www.typescriptlang.org/"
     },
     {
-      "id": "nodejs",
-      "name": "Nodejs",
+      "id": "node",
+      "name": "Node.js",
       "url": "https://nodejs.org/"
     },
     {
