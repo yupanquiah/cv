@@ -13,5 +13,5 @@ export default defineConfig({
     }
   },
 
-  site: "https://cv.llusync.com/"
+  site: "https://cv.yupanquidev.dev/"
 })
