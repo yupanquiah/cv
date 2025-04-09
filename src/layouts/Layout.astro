@@ -12,7 +12,7 @@ const { name } = basics;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -28,6 +28,11 @@ const { name } = basics;
 </html>
 
 <style>
+  body {
+    position: relative;
+    background-color: #fff;
+  }
+
   .app {
     max-width: 672px;
     margin: 0 auto;
@@ -65,6 +70,7 @@ const { name } = basics;
   }
 
   body {
+    color-scheme: light dark;
     width: 100%;
     margin: 0;
     min-height: 100dvh;
@@ -99,7 +105,7 @@ const { name } = basics;
   }
 
   @media print {
-    .no-print {
+    h1 .no-print {
       display: none;
     }
   }
