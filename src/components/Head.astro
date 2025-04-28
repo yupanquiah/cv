@@ -1,6 +1,6 @@
 ---
 import { basics } from "@/data/cv.json";
-const { name } = basics;
+const { name, label } = basics;
 ---
 
 <head>
@@ -8,4 +8,5 @@ const { name } = basics;
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{name} - CV</title>
+  <meta name="description" content={label} />
 </head>
