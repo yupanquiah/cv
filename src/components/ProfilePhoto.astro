@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
 
-import photo from "@/assets/imgs/profile.jpg";
+import photo from "@/assets/imgs/profile.webp";
 
 import { basics } from "@/data/cv.json";
 const { name } = basics;
 ---
 
 <figure>
-  <Image src={photo} alt={`Foto de perfil de ${name}`} />
+  <Image src={photo} alt={`Foto de perfil de ${name}`} loading="lazy" />
 </figure>
 
 <style>
