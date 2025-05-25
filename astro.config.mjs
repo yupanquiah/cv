@@ -7,11 +7,5 @@ export default defineConfig({
     inlineStylesheets: 'always',
   },
 
-  experimental: {
-    svg: {
-      mode: "sprite"
-    }
-  },
-
   site: "https://cv.yupanquidev.dev/"
 })
