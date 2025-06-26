@@ -4,7 +4,7 @@
     "label": "Desarrollador Web & Graduado en Ingeniería de Software con Inteligencia Artificial",
     "image": "/profile.jpg",
     "email": "yupanquiah@gmail.com",
-    "phone": "983844911",
+    "phone": "+51 983 844 911",
     "url": "https://cv.llusync.dev",
     "summary": "+1 años de experiencia en colaborando en el desarrollo de aplicaciones web. He trabajado en proyectos de diferentes tamaños y tecnologías. Me gusta aprender y compartir conocimientos.",
     "location": {
@@ -47,10 +47,9 @@
       "endDate": "06/2024",
       "summary": "Implementación de nuevas funcionalidades en la aplicación web de la empresa.",
       "items": [
-        "Fue desarrollado con TailwindCSS y Larvel, mejorando la velocidad de desarrollo y el tiempo de comercialización."
+        "Fue desarrollado con TailwindCSS y Laravel, mejorando la velocidad de desarrollo y el tiempo de comercialización."
       ],
       "highlights": [
-        "Precencial",
         "PHP",
         "Laravel",
         "PostgreSQL",
@@ -67,10 +66,9 @@
       "items": [
         "Maquetación de sitos Webs.",
         "Diseño y modelado de base de datos.",
-        "Programación en php."
+        "Programación en php y JavaScript."
       ],
       "highlights": [
-        "Precencial",
         "PHP",
         "JavaScript",
         "MySQL"
@@ -86,9 +84,11 @@
       "items": [
         "Mantenimiento y Optimización de Paginas web.",
         "Manejo de Seo, hosting y dominio.",
-        "Desarrollado en Wordpress."
+        "Desarrollado en Wordpress.",
+        "Diseño en Figma"
       ],
       "highlights": [
+        "Figma",
         "WordPress",
         "SEO",
         "Diseño"
@@ -160,6 +160,11 @@
       "id": "git",
       "name": "Git",
       "url": "https://git-scm.com/doc"
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "url": "https://figma.com"
     }
   ],
   "languages": [

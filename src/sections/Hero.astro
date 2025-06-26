@@ -34,7 +34,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
     <h1>{name}</h1>
     <p>{label}</p>
     <a class="location" href={url} target="_blank" rel="noopener noreferrer">
-      <Globe size={12} />
+      <Globe width={12} height={12} />
       {currentLocation}
     </a>
     <ul>
@@ -75,7 +75,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
           const Icon = SOCIAL_ICONS[network];
           return (
             <a href={url} title={`Visitar el perfil de ${name} en ${network}`}>
-              <Icon />
+              <Icon title={`Icono de ${network}`} />
             </a>
           );
         })

@@ -38,7 +38,7 @@ const ICONS: Icon = {
         const Icon = ICONS[id];
         return (
           <a href={url} target="_blank" rel="noopener noreferrer">
-            {Icon && <Icon size="14" class="no-print" />}
+            {Icon && <Icon width={16} height={16} class="no-print" />}
             <span>{name}</span>
           </a>
         );
