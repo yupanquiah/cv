@@ -37,50 +37,61 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
       <Globe width={12} height={12} />
       {currentLocation}
     </a>
-    <ul>
+    <ul class="print">
       <li><a href="">{email}</a></li> /
       <li><a href={website}>{website}</a></li> /
       <li><a href="">{phone}</a></li>
     </ul>
-    <section>
+    <ul class="no-print">
       {
         url && (
-          <a href={website} title={`Visitar la página ${name} `}>
-            <Globe />
-          </a>
+          <li>
+            <a href={website} title={`Visitar la página ${name} `}>
+              <Globe />
+            </a>
+          </li>
         )
       }
       {
         email && (
-          <a
-            href={url}
-            title={`Enviar un correo electrónico a ${name} al correo ${email}`}
-          >
-            <Mail />
-          </a>
+          <li>
+            <a
+              href={url}
+              title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+            >
+              <Mail />
+            </a>
+          </li>
         )
       }
       {
         phone && (
-          <a
-            href={url}
-            title={`Llamar por teléfono a ${name} al número ${phone}`}
-          >
-            <Phone />
-          </a>
+          <li>
+            <a
+              href={url}
+              title={`Llamar por teléfono a ${name} al número ${phone}`}
+            >
+              <Phone />
+            </a>
+          </li>
         )
       }
       {
         PROFILES.map(({ network, username, url }) => {
           const Icon = SOCIAL_ICONS[network];
           return (
-            <a href={url} title={`Visitar el perfil de ${name} en ${network}`}>
-              <Icon title={`Icono de ${network}`} />
-            </a>
+            <li>
+              <a
+                href={url}
+                title={`Visitar el perfil de ${name} en ${network}`}
+              >
+                <Icon title={`Icono de ${network}`} />
+              </a>
+            </li>
           );
         })
       }
-    </section>
+    </ul>
   </article>
   <ProfilePhoto />
 </section>
@@ -97,7 +108,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
       flex-direction: column;
       gap: 4px;
 
-      ul {
+      .print {
         display: none;
         gap: 8px;
         margin-top: 4px;
@@ -143,7 +154,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
         text-decoration: underline;
       }
 
-      section {
+      .no-print {
         display: flex;
         flex-direction: row;
         justify-content: start;
@@ -181,11 +192,11 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
   @media print {
     section {
       article {
-        ul {
+        .print {
           display: inline-flex;
         }
 
-        section {
+        .no-print {
           display: none;
         }
       }

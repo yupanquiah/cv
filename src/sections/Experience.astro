@@ -38,7 +38,10 @@ import { work as WORKS } from "@/data/cv.json";
               {highlights && highlights.length > 0 && (
                 <footer slot="highlights">
                   {highlights.map((highlights) => (
-                    <span>{highlights}</span>
+                    <span>
+                      {highlights}
+                    </span>
+                    <small>•</small>
                   ))}
                 </footer>
               )}
@@ -89,5 +92,29 @@ import { work as WORKS } from "@/data/cv.json";
     align-items: center;
     flex-wrap: wrap;
     gap: 2px;
+
+    small {
+      display: none;
+
+    }
+  }
+
+  @media print {
+    footer {
+      gap: 4px;
+
+      span {
+        font-weight: 500;
+        padding: 0;
+      }
+
+      small {
+        display: block;
+      }
+
+      small:last-child {
+        display: none;
+      }
+    }
   }
 </style>
