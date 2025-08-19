@@ -1,17 +1,16 @@
 ---
+import { Font } from "astro:assets";
+
 import { basics } from "@/data/cv.json";
 const { name, label } = basics;
-
-import "@fontsource-variable/geist";
-import "@fontsource/monaspace-neon/300.css";
-import "@fontsource/monaspace-neon/400.css";
-import "@fontsource/monaspace-neon/500.css";
-import "@fontsource/monaspace-radon/400.css";
 ---
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
+  <Font cssVariable="--font-geist" preload />
+  <Font cssVariable="--font-monaspace-neon" preload />
+  <Font cssVariable="--font-monaspace-radon" preload />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>CV - {name}</title>
   <meta name="description" content={label} />

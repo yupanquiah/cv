@@ -103,7 +103,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
   #hotkeypad {
     --hotkeypad-font-mono: "Monaspace Neon", monospace;
     width: 100%;
-    font-family: "Monaspace Neon", monospace;
+    font-family: var(--font-monaspace-neon), monospace;
   }
 
   @keyframes fadeIn {
@@ -146,7 +146,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
   }
 
   footer {
-    font-family: "Monaspace Neon", monospace;
+    font-family: var(--font-monaspace-neon), monospace;
     font-weight: 400;
     font-size: 12px;
     background: #fff;

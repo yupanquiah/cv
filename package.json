@@ -12,7 +12,7 @@
     "@fontsource-variable/geist": "5.2.5",
     "@fontsource/monaspace-neon": "5.2.5",
     "@fontsource/monaspace-radon": "5.2.5",
-    "astro": "5.8.0",
+    "astro": "5.13.2",
     "hotkeypad": "1.0.1"
   }
 }
