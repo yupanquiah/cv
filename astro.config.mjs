@@ -7,5 +7,5 @@ export default defineConfig({
     inlineStylesheets: 'always',
   },
 
-  site: "https://cv.yupanquidev.dev/"
+  site: "https://cv.yupanqui.dev/"
 })
