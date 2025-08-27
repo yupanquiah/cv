@@ -56,7 +56,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
         email && (
           <li>
             <a
-              href={url}
+              href={`mailto:${email}`}
               title={`Enviar un correo electrónico a ${name} al correo ${email}`}
             >
               <Mail />
@@ -68,7 +68,7 @@ const currentLocation = `${address} - ${country} ${flag}, ${peruTime}`;
         phone && (
           <li>
             <a
-              href={url}
+              href={`tel:${phone}`}
               title={`Llamar por teléfono a ${name} al número ${phone}`}
             >
               <Phone />
