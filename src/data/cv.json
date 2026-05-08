@@ -1,15 +1,15 @@
 {
   "basics": {
     "name": "Humberto Yupanqui Apaza",
-    "label": "Desarrollador Web & Graduado en Ingeniería de Software con Inteligencia Artificial",
+    "label": "Técnico en Ingeniería de Software",
     "image": "/profile.jpg",
     "email": "yupanquiah@gmail.com",
     "phone": "+51 983 844 911",
     "url": "https://cv.yupanqui.dev",
-    "summary": "+2 años de experiencia en colaborando en el desarrollo de aplicaciones web. He trabajado en proyectos de diferentes tamaños y tecnologías. Me gusta aprender y compartir conocimientos.",
+    "summary": "Técnico en Ingeniería de Software con enfoque, trabajo en equipo y comunicación efectiva. Busco formar parte del equipo de servicio a bordo, donde pueda combinar mis habilidades técnicas con la atención al detalle, la responsabilidad y el compromiso con la seguridad y la satisfacción del pasajero.",
     "location": {
       "url": "https://www.google.com/maps/place/Cusco/",
-      "address": "Cusco",
+      "address": "Ollantaytambo, Cusco",
       "postalCode": "08820",
       "city": "Cusco",
       "countryCode": "PE",
@@ -40,11 +40,25 @@
   },
   "work": [
     {
+      "name": "Misión Tecnológica MT",
+      "position": "Soporte Técnico (reemplazo temporal)",
+      "url": "https://softcont.pe/",
+      "startDate": "12/2024",
+      "endDate": "01/2025",
+      "summary": "Soporte técnico temporal enfocado en el mantenimiento de impresoras, verificación de insumos y atención a incidencias de equipos dentro de la empresa:",
+      "items": [
+        "Verificación y reposición de tóners y suministros de impresión.",
+        "Registro de incidencias y comunicación con el área técnica para el seguimiento de equipos.",
+        "Revisión y mantenimiento básico de impresoras en diferentes áreas de la empresa."
+      ],
+      "highlights": []
+    },
+    {
       "name": "SOFTCONT",
       "position": "Pranticante de desarrollador de Laravel",
       "url": "https://softcont.pe/",
       "startDate": "01/2024",
-      "endDate": "06/2024",
+      "endDate": "011/2024",
       "summary": "Implementación de nuevas funcionalidades en la aplicación web de la empresa.",
       "items": [
         "Fue desarrollado con TailwindCSS y Laravel, mejorando la velocidad de desarrollo y el tiempo de comercialización."
@@ -73,26 +87,6 @@
         "JavaScript",
         "MySQL"
       ]
-    },
-    {
-      "name": "Skynet E.I.R.L",
-      "position": "Aprendiz de diseño web",
-      "url": "",
-      "startDate": "01/2023",
-      "endDate": "06/2023",
-      "summary": "Colaboré el diseño y desarrollo de sitios web para agencias de viajes.",
-      "items": [
-        "Mantenimiento y Optimización de Paginas web.",
-        "Manejo de Seo, hosting y dominio.",
-        "Desarrollado en Wordpress.",
-        "Diseño en Figma"
-      ],
-      "highlights": [
-        "Figma",
-        "WordPress",
-        "SEO",
-        "Diseño"
-      ]
     }
   ],
   "education": [
@@ -108,63 +102,23 @@
   "skills": [
     {
       "id": "html",
-      "name": "HTML",
+      "name": "Trabajo en equipo y adaptabilidad.",
       "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
     },
     {
       "id": "css",
-      "name": "CSS",
+      "name": "Puntualidad, responsabilidad y presentación profesional.",
       "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
     },
     {
       "id": "javascript",
-      "name": "JavaScript",
+      "name": "Manejo básico de software de gestión y sistemas informáticos.",
       "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
       "id": "tailwindcss",
-      "name": "TailwindCSS",
+      "name": "Idiomas: Español (nativo), Inglés (basico).",
       "url": "https://tailwindcss.com/"
-    },
-    {
-      "id": "typescript",
-      "name": "TypeScript",
-      "url": "https://www.typescriptlang.org/"
-    },
-    {
-      "id": "node",
-      "name": "Node.js",
-      "url": "https://nodejs.org/"
-    },
-    {
-      "id": "laravel",
-      "name": "Laravel",
-      "url": "https://laravel.com/"
-    },
-    {
-      "id": "php",
-      "name": "PHP",
-      "url": "https://www.php.net/"
-    },
-    {
-      "id": "astro",
-      "name": "Astro",
-      "url": "https://astro.build/"
-    },
-    {
-      "id": "sql",
-      "name": "SQL",
-      "url": "https://www.w3schools.com/sql/"
-    },
-    {
-      "id": "git",
-      "name": "Git",
-      "url": "https://git-scm.com/doc"
-    },
-    {
-      "id": "figma",
-      "name": "Figma",
-      "url": "https://figma.com"
     }
   ],
   "languages": [
