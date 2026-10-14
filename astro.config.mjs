@@ -6,8 +6,6 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'always',
   },
-
-  experimental: {
     fonts: [
       {
         name: "Geist",
@@ -31,8 +29,6 @@ export default defineConfig({
         styles: ["italic"],
         display: "swap"
       }
-    ]
-  },
-
+    ],
   site: "https://cv.yupanqui.dev/"
 })
