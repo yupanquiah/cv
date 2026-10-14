@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "5.13.2",
+    "@tanstack/hotkeys": "0.11.0",
+    "astro": "7.3.8",
     "hotkeypad": "1.0.1"
   }
 }
