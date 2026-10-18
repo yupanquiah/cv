@@ -5,12 +5,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "bun run build && wrangler dev",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.3.4",
     "@tanstack/hotkeys": "0.11.0",
     "astro": "7.3.8",
     "hotkeypad": "1.0.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.0"
   }
 }
