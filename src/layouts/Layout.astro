@@ -1,6 +1,7 @@
 ---
 import Head from "~/components/Head.astro";
 import KeyboardManager from "~/components/KeyboardManager.astro";
+import Footer from "~/sections/Footer.astro";
 ---
 
 <!doctype html>
@@ -10,6 +11,7 @@ import KeyboardManager from "~/components/KeyboardManager.astro";
     <main class="app">
       <slot />
     </main>
+    <Footer />
     <KeyboardManager />
   </body>
 </html>
@@ -18,18 +20,22 @@ import KeyboardManager from "~/components/KeyboardManager.astro";
   body {
     position: relative;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
   }
 
   .app {
     max-width: 672px;
     margin: 0 auto;
     width: 100%;
-    padding: 32px 16px;
+    flex: 1;
+    padding: 32px 16px 56px;
   }
 
   @media (width >= 40rem) {
     .app {
-      padding: 62px 16px;
+      padding: 62px 16px 56px;
     }
   }
 
