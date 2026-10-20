@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -11,12 +11,10 @@
     "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.3.4",
-    "@tanstack/hotkeys": "0.11.0",
-    "astro": "7.3.8",
-    "hotkeypad": "1.0.1"
+    "@astrojs/cloudflare": "14.3.4",
+    "astro": "7.3.8"
   },
   "devDependencies": {
-    "wrangler": "^4.151.0"
+    "wrangler": "4.151.0"
   }
 }
